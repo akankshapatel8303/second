@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+   <style>
+    .container{
+    border: 2px solid black;
+    background-color: rgb(172, 165, 186);
+   padding: 0px 10px;
+   border-radius: 5px;
+}
+h1{
+    text-align: center;
+}
+#name1,#name2,#name3,#name4,#fcol,#clg,#email,#add,#number,#ID,#RN{
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+label:hover{
+    color: rgb(85, 81, 81);
+}
+#name1,#name2,#name3,#name4,#RN,#clg,#ID,#fcol{
+    width: 98.5%;
+}
+#number,#email,#add{
+    width: 99%;
+}
+fieldset{
+    border-radius: 5px;
+    background-color: rgb(199, 196, 211);
+    color: rgb(5, 5, 5);
+    border:1px solid rgb(24, 24, 80);
+}
+legend{
+    font-size: larger;
+    font-weight: 900;
+    /* margin: 5px; */
+}
+
+#resume{
+    font-size:medium;
+    background-color: rgb(46, 29, 114);
+    color: beige;
+}
+.year,.gender,.p{
+    background-color: rgb(227, 226, 240);
+}
+div{
+    font-size: large;
+}
+#submit,#reset{
+    /* background-color: rgb(134, 131, 186); */
+    background-color: rgb(46, 29, 114);
+    border-radius: 5px;
+    color: beige;
+    width: 49.5%;
+    padding: 5px;
+    font-size: large;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#submit:hover,#reset:hover{
+    background-color: rgb(17, 17, 44);
+}
+#m,#q,#r,#n,#s,#t,#u{
+    margin: 0px 16px;
+}
+@media screen and (max-width: 421px){
+    #m,#q,#r{
+        margin: 0px 7px;
+    }
+    #n,#s,#t,#u{
+        margin: 0px 0px;
+    }
+}
+   </style>
+</head>
+<body>
+    <div class="container">
+        <form action="post">
+            <h1>Introduction Form</h1>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name1">Name:</label>
+                <input type="text" name="name" id="name1" placeholder="Write your Name">
+
+                <br><br>
+                <label for="name2">Father Name:</label>
+                <input type="text" name="name" id="name2" placeholder="Write your Father name">
+                <br><br>
+                <label for="name3">Mother Name:</label>
+                <input type="text" name="name" id="name3" placeholder="Write your Mother name">
+                <br><br>
+                <fieldset class="gender">
+                    <legend>Gender</legend>
+                    <label for="male" id="m">Male</label>
+                    <input type="radio" name="gender" id="male">
+                    <label for="female" id="q">Female</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="other" id="r">Other</label>
+                    <input type="radio" name="gender" id="other">
+                    </fieldset>
+                    <br>
+                <label for="name4">Date Of Birth:</label>
+                <input type="date" name="name" id="name4" placeholder="DD/MM/YY ">
+                <br><br>
+                <label for="clg">Collage Name</label>
+                <input type="text" name="collage" id="clg" placeholder="Write your collage name">
+                <br><br>
+                <fieldset class="year">
+                    <legend>Year:</legend>
+                    <label for="fst" id="n">First</label>
+                    <input type="radio" name="year" id="fst">
+                    <label for="snd" id="s">Second</label>
+                    <input type="radio" name="year" id="snd">
+                    <label for="trd" id="t">Third</label>
+                    <input type="radio" name="year" id="trd">
+                    <label for="fth" id="u">Fourth</label>
+                    <input type="radio" name="year" id="fth">
+                </fieldset>
+                <br>
+                <label for="RN">Roll.No:</label>
+                <input type="text" name="roll" id="RN" placeholder="Write your Roll number">
+                <br><br>
+                <label for="ID">Student ID:</label>
+                <input type="text" name="id" id="ID">
+                <br><br>
+                <label for="resume">Upload Resume:</label>
+                 <input type="file" name="Resume" id="resume">
+                <br><br>
+                <fieldset class="p">
+                    <legend>Contact Information</legend>
+                    <label for="number">Mobile Number:</label>
+                    <input type="text" name="name" id="number" placeholder="Write your mobile number">
+                    <br><br>
+                    <label for="email">Email:</label>
+                    <input type="text" name="em" id="email" placeholder="Write your Email">
+                    <br><br>
+                    <label for="add">Address:</label>
+                    <input type="text" name="name" id="add" placeholder="Write your Address">
+
+                </fieldset>
+                <br>
+                Favourite color:<input type="color" name="color" id="fcol">
+                <br><br>
+                <div>Branch:</div>
+                <select name="branch" id="branch">
+                    <option value="">-------Select option------</option>
+                    <option value="CSE">Computer Science Engineering</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="ECE">Electronics and Communication Engineering</option>
+                    <option value="EE">Electrical Engineering</option>
+                    <option value="ME">Mechanical Engineering</option>
+                    <option value="IP">IP</option>
+                </select>
+
+                <br><br>
+
+                <div>State:</div>
+                <select name="state" id="state">
+                    <option value="">------select state-----</option>
+                    <optgroup label="North">
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="H">Haryana</option>
+                </optgroup>
+
+                    <optgroup label="South">
+                    <option value="H">Hydrabad</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="Te">Telangana</option>
+                </optgroup>
+
+                    <optgroup label="North East">
+                        <option value="mg">Maghlaya</option>
+                        <option value="ar">Arudanchal Pradesh</option>
+                        <option value="sikkim">Sikkim</option>
+                        </optgroup>
+                   <option value="other">Other</option>
+                    
+                </select>
+                <br><br>
+                <input type="Submit" name="submit" id="submit">
+                <input type="Reset" name="reset" id="reset">
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
